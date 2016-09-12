@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Cartoon Collector</title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body ng-controller="MainController">
+	<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-12" id="top">
+			<div id="title"><h1>CARTOON COLLECTION</h1></div>
+		</div>
+	</div>
+		<div class="row" id="middle">
+			<div class="Absolute-Center is-Responsive">
+
+				<div class="col-sm-12 col-md-10 col-md-offset-1">
+					<form action="" id="form">
+						<div class="form-group input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
+							<input class="form-control" type="text" name='imageUrl' placeholder="image url" ng-model="newCartoon.url" />
+						</div>
+						<div class="form-group input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-tag"></i></span>
+							<input class="form-control" type="text" name='title' placeholder="title" ng-model="newCartoon.title" />
+						</div>
+						<div class="form-group input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-tag"></i></span>
+							<input class="form-control" type="text" name='description' placeholder="description" ng-model="newCartoon.description" />
+						</div>
+						<div class="form-group">
+							<button type="button" class="btn btn-def btn-block" ng-click="addCartoon()">Submit</button>
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12" ng-repeat="cartoon in cartoons" id="content">
+				<img ng-src="{{cartoon.url}}">
+				<div>
+					<p>Title: {{cartoon.title}}</p>
+				</div>
+				<div>
+					<p>Description: {{cartoon.description}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script src="app.js"></script>
+	<script src="cartoonservice.js"></script>
+</body>
+
+</html>

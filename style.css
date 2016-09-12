@@ -1,0 +1,38 @@
+#top {
+	background-color:black;
+	height: 150px;
+	color: azure;
+	text-align: center;
+	font-size: 20px;
+}
+
+#middle {
+	background-color: gray;
+	height: 220px;
+	padding-top: 20px;
+}
+
+body {
+	background-color:black;
+} 
+
+#content {
+	padding-top: 20px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	text-align: center;
+	font-size: 20px;
+	color: azure;
+}
+
+button {
+	background-color: aquamarine;
+}
+
+
+#title {
+	padding-top: 30px;
+	text-decoration: underline;
+	
+}
